@@ -10,37 +10,46 @@
   <body>
     <div class="page">
       <header>
-        <div class="header-container">
-          <div class="logo-container">
+        <div class="header-container col">
+          <div class="logo-container col-lg-6">
             <p><img src="Images/logos/post-nl-logo.png" alt="PostNL logo" /></p>
             <p><img src="Images/logos/icons.png" alt="PostNL logos" /></p>
-            <p>Drukwerkservice</p>
+            <p class="logo-title">Drukwerkservice</p>
           </div>
-          <div class="header-menu">
-            <div class="top-menu">
-              <div class="access-menu">
+          <div class="header-menu col-lg-6">
+            <div class="top-menu col">
+              <div class="access-menu col-lg-4">
                 <ul>
-                  <li><span>&gt;</span>Inloggen</li>
-                  <li><span>&gt;</span>Registeren</li>
+                  <li><a href="#">Inloggen</a></li>
+                  <li><a href="#">Registeren</a></li>
                 </ul>
               </div>
-              <div class="search">
-
-              </div>
+              <form class="search col-lg-8" action="index.html" method="post">
+                <div class="input-box">
+                  <input type="search" name="search" value="Vul hier uw zoekterm in">
+                  <button type="submit"></button>
+                </div>
+              </form>
             </div>
-            <div class="bottom-menu">
-              <div class="nav-menu">
-
-              </div>
-              <div class="header-cart">
-
-              </div>
-            </div>
+            <ul class="bottom-menu col">
+              <li class="col-lg-4">
+                <div class="main-menu">KLANTENSERVICE</div>
+                <p>Voor al uw vragen en info</p>
+              </li>
+              <li class="col-lg-4">
+                <div class="main-menu">UW GEGEVENS</div>
+                <p>U bent niet ingelogd</p>
+              </li>
+              <li class="col-lg-4">
+                <div class="main-menu">WINKELMAND</div>
+                <p>0 artikelen</p>
+              </li>
+            </ul>
           </div>
         </div>
+        <hr>
       </header>
       <div class="container">
-
       </div>
       <footer>
 
