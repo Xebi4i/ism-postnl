@@ -159,7 +159,6 @@ button[name="search-btn"]:active {
   margin-left: 6px;
   position: relative;
   top: 1px;
-  /*vertical-align: middle;*/
 }
 .answers {
   display: none;
@@ -189,6 +188,7 @@ button[name="search-btn"]:active {
   font-size: 12px;
   line-height: 25px;
   border-bottom: 1px dotted #c1c5c7;
+  position: relative;
 }
 #ans-list li:first-of-type{
   border-top: 1px dotted #c1c5c7;
@@ -238,6 +238,9 @@ button[name="search-btn"]:active {
   position: relative;
   left: 25px;
 }
+.bottom-menu>li:last-of-type>* {
+  display: block;
+}
 .bottom-menu>li:last-of-type>div::after {
   background: none;
 }
@@ -268,6 +271,7 @@ button[name="search-btn"]:active {
 }
 .dropdown-items>a {
   display: block;
+  position: relative;
   line-height: 25px;
   color: #666;
   font-family: Arial;
@@ -284,8 +288,9 @@ button[name="search-btn"]:active {
   height: 14px;
   display: inline-block;
   float: right;
-  position: relative;
+  position: absolute;
   top: 6px;
+  right: 0;
 }
 .menu_pointer:hover::after {
   content: "";
@@ -294,7 +299,7 @@ button[name="search-btn"]:active {
   height: 14px;
   display: inline-block;
   float: right;
-  position: relative;
+  position: absolute;
   top: 6px;
 }
 header hr {
@@ -333,7 +338,79 @@ header hr {
   clear:both;
   margin: 10px 0;
 }
+#main-block {
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+}
+.main-title {
+  color: #ed8c00;
+  font-family: PostNL;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+}
+#main-block hr {
+  border: 0;
+  border-top: 1px solid rgba(210,214,217,0.5);
+}
+.desc {
+  display: block;
+  margin-top: 20px;
+}
+.desc>* {
+  display: block;
+}
+.desc img {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+.desc span {
+  color: #001376;
+  font-family: PostNL;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 18px;
+  margin: 5px 0;
+}
+.desc p {
+  color: #666;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.sub-title {
+  color: #001376;
+  font-family: PostNL;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  margin: 20px 0;
+}
+.desc-block>span {
+  color: #666;
+  font-family: PostNL;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 30px;
+}
+.desc-block>p {
+  color: #666;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.points {
+  margin-bottom: 40px;
+}
 /*-------------------------------left menu STYLES-------------------------*/
+#left-menu-block {
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+}
 .left-menu-title {
   color: #001376;
   font-family: PostNL;
@@ -342,9 +419,6 @@ header hr {
   line-height: 30px;
   margin-bottom: 10px;
 }
-#left-menu-block {
-  padding-right: 20px;
-}
 #left-menu-block li {
   color: #666;
   font-family: Arial;
@@ -352,15 +426,18 @@ header hr {
   font-weight: 400;
   line-height: 25px;
   border-bottom: 1px dotted #c1c5c7;
+  position: relative;
 }
 #left-menu-block li:first-of-type {
   border-top: 1px dotted #c1c5c7;
 }
 /*-------------------------------end of left menu STYLES------------------*/
 /*-------------------------------right menu STYLES-------------------------*/
-
-/*-------------------------------end of right menu STYLES------------------*/
-/*-------------------------------END OF MAIN CONTAINER STYLES-----------------*/
+#right-menu-block {
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+}
 #advantages li {
   position: relative;
   display: block;
@@ -376,7 +453,7 @@ header hr {
 #advantages li img {
   display: block;
   position: absolute;
-  left:20px;
+  left:15px;
   top: 18px;
 }
 .adv-desc {
@@ -471,9 +548,12 @@ header hr {
   font-style: italic;
   line-height: 19px;
 }
+/*-------------------------------end of right menu STYLES------------------*/
+/*-------------------------------END OF MAIN CONTAINER STYLES-----------------*/
+
 /*-------------------------------FOOTER STYLES--------------------------------*/
 footer {
-  margin: 50px 0;
+  margin-bottom: 60px;
 }
 .top-footer {
   background-color: #fdfdfd;
@@ -597,6 +677,9 @@ footer {
   .logo-container>p:nth-of-type(2) {
     margin-right: 50px;
   }
+  .img-block {
+    padding: 15px 0 0 15px;
+  }
 }
 @media (min-width: 640px) and (max-width: 939px) {
   .not-visible-md {
@@ -650,6 +733,9 @@ footer {
   }
   .top-footer #row1>div, .top-footer #row2>div {
     padding-left: 60px;
+  }
+  .img-block {
+    margin-top: 30px;
   }
 }
 @media (max-width: 639px) {
@@ -732,6 +818,9 @@ footer {
   .bottom-footer li:last-of-type {
     display: table;
     margin: 0 auto;
+  }
+  .img-block {
+    margin-top: 20px;
   }
 }
 /*-------------------------------END OF RESPONSIVE STYLES---------------------*/
