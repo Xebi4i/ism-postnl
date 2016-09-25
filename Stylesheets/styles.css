@@ -146,6 +146,7 @@ button[name="search-btn"]:active {
   left: 0px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   color: white;
+  font-family: PostNL;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
@@ -350,7 +351,60 @@ header hr {
   font-weight: 500;
   line-height: 25px;
 }
+#rotator {
+  margin-top: 20px;
+}
+#rotator, #rotator-wrapper, .highline {
+  display: block;
+}
+.highline {
+  top: 100px;
+  position: relative;
+}
+.highline>* {
+  position: absolute;
+  padding-left: 20px;
+}
+.hl-bg {
+  width: 345px;
+  height: 71px;
+  opacity: 0.5;
+  background-color: #c1c5c7;
+  border-radius: 5px;
+}
+.highline p {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-family: PostNL;
+  font-size: 25px;
+  font-weight: 700;
+  top: 10px;
+}
+.highline span {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-family: PostNL;
+  font-size: 20px;
+  font-weight: 400;
+  top: 35px;
+}
+#rotator-wrapper>img {
+  width: 100%;
+  /*position: absolute;*/
+}
+.dots li {
+  float: right;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAj0lEQVQIW12OMQ4BQRiF3/st0+hWR8kdls2GyhE4hYK4hu32MAoGyc403IdMsr9sYhRbveT7iu8RAKy1QzFmwwYpVa5Fkb1aTmufIxkEB2DWAgCqwHGVz0venC+p2P9EnE9IZMx77c4A1x0JUHM+an9S4NCR75DIJDY9gGlsgtwtF1nF/9u+2SqZ9hpe4tsv/0QuUXvlyh0AAAAASUVORK5CYII=) no-repeat scroll 0 0 transparent;
+  margin: 4px 0 9px 15px;
+  width: 6px;
+  height: 6px;
+  cursor: pointer;
+}
+.dots .active {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAh0lEQVQIW12OMQ6CQAAEZ2O0sjustNRX2PsEeIUFwi8EOh5joaVWfoTkGgoDKJ6BgDF2m5liVgBFznxS4euNacVlEXPvuMoE7wlXYNMBwCFiE5HJJmRAOIjBUs8alrIpJxy7X9lvsZU9kiIOf7KaNqz65gtuDtZj04m9F5Hr+/ZBIGFaOI9vP3F8KNK4LWkUAAAAAElFTkSuQmCC) no-repeat scroll 0 0 transparent;
+}
 #main-block hr {
+  clear: both;
   border: 0;
   border-top: 1px solid rgba(210,214,217,0.5);
 }
@@ -821,6 +875,12 @@ footer {
   }
   .img-block {
     margin-top: 20px;
+  }
+  .hl-bg {
+    width: 305px;
+  }
+  .highline {
+    top: 50px;
   }
 }
 /*-------------------------------END OF RESPONSIVE STYLES---------------------*/
