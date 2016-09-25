@@ -9,9 +9,11 @@
     font-family: 'PostNL-Light';
     src: url('../Fonts/PostNL-Light.ttf') format('truetype');
 }
+body {
+  margin: 0px;
+}
 .page {
-  max-width: 940px;
-  margin: 0 auto;
+  width: 100%;
   font-family: 'PostNL', sans-serif;
   font-size: 12px;
   background-color: #fff;
@@ -33,6 +35,12 @@ a:hover {
   text-decoration: underline;
   color: #666;
 }
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+/*-------------------------------HEADER STYLES--------------------------------*/
 .logo-title {
   font-family: 'PostNL-Light';
   font-size: 25px;
@@ -239,6 +247,7 @@ button[name="search-btn"] {
   border-radius: 5px;
   margin: -15px;
   padding: 15px;
+  background-color: #fff;
 }
 .dropdown-wrapper:hover .dropdown-items, .dropdown-wrapper:hover .dummy-block {
   display: block;
@@ -282,7 +291,76 @@ header hr {
   width: 93%;
   margin-left: auto;
 }
-.container, .col {
+/*-------------------------------END OF HEADER STYLES-------------------------*/
+
+/*-------------------------------MAIN CONTAINER STYLES------------------------*/
+
+/*-------------------------------END OF MAIN CONTAINER STYLES-----------------*/
+
+/*-------------------------------FOOTER STYLES--------------------------------*/
+footer {
+  margin: 50px 0;
+}
+.top-footer {
+  background-color: #fdfdfd;
+  border-top: 1px solid rgba(210, 214, 217, 0.5);
+  border-bottom: 1px solid rgba(210, 214, 217, 0.5);
+}
+.top-footer p {
+  font-family: "PostNL";
+  font-size: 14px;
+  line-height: 30px;
+  color: #001376;
+}
+.top-footer ul li {
+  font-family: Arial;
+  font-size: 12px;
+  line-height: 20px;
+  color: #666;
+}
+.top-footer hr {
+  border:0;
+  border-top: 1px solid rgba(193,197,199,0.5);
+}
+.top-footer #row1, .top-footer #row2 {
+  padding: 15px 0;
+}
+.top-footer ul {
+  margin-right: 20px;
+  border-top: 1px dotted rgba(193,197,199,0.5);
+}
+.bottom-footer {
+  display: block;
+}
+.bottom-footer ul {
+  float: right;
+}
+.bottom-footer li {
+  font-family: Arial;
+  font-size: 11px;
+  font-weight: 700;
+  color: #666;
+  float: left;
+  margin: 12px 5px;
+}
+.bottom-footer li a {
+  color: #001376;
+}
+.bottom-footer li span {
+  margin-right: 5px;
+}
+.bottom-footer li:last-of-type {
+  margin: 0;
+}
+.bottom-footer li img{
+  width: 38px;
+  height: 37px;
+  margin-left: 20px;
+}
+/*-------------------------------END OF FOOTER STYLES-------------------------*/
+
+/*-------------------------------RESPONSIVE STYLES----------------------------*/
+.col {
   width: 100%;
   display: table;
 }
@@ -392,6 +470,9 @@ header hr {
   .col-md-12{
     width: 100%;
   }
+  .top-footer #row1>div, .top-footer #row2>div {
+    padding-left: 60px;
+  }
 }
 @media (max-width: 639px) {
   .not-visible-sm {
@@ -439,9 +520,6 @@ header hr {
   .col-sm-12{
     width: 100%;
   }
-  body {
-    margin: 0;
-  }
   .logo-container>p:first-child {
     margin-right: 10px;
   }
@@ -458,4 +536,24 @@ header hr {
   .answers {
     width: 260px;
   }
+  .top-footer #row1>div, .top-footer #row2>div {
+    padding-left: 10px;
+  }
+  .bottom-footer ul {
+    display: table;
+    float: none;
+    margin: 0 auto;
+  }
+  .bottom-footer li {
+    display: block;
+    float: none;
+  }
+  .bottom-footer li img{
+    margin: 0;
+  }
+  .bottom-footer li:last-of-type {
+    display: table;
+    margin: 0 auto;
+  }
 }
+/*-------------------------------END OF RESPONSIVE STYLES---------------------*/

@@ -12,18 +12,18 @@ var main = function (){
 
   $("input[name='search-input']").keydown(function() {
     var search_value = $("input[name='search-input']").val();
-    $("#ans-list li:first-of-type a").html(search_value);
-    $(".answers").attr("style", "display:block;");
+    if (search_value.length > 0) {
+      $(".answers").attr("style", "display:block;");
+      $("#ans-list li:first-of-type a").html(search_value);
+    }
   });
 
-  $(".search-wrapper").focusout(function() {
-    if ($(".answers").is(":focus")) {
-      $(".answers").attr("style", "display:block;");
-    }
-    else {
-      $(".answers").attr("style", "display:none;");
-    }
-  });
+  $(".answers").mouseover(function() {
+        $(".answers").attr("style", "display:block;");
+      })
+      .mouseout(function() {
+            $(".answers").attr("style", "display:none;");
+          });
 
   var resizeMe = function() {
     if($(window).width() < 640) {
