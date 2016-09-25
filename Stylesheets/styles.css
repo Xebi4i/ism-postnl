@@ -125,14 +125,25 @@ button[name="search-btn"] {
   border: 3px;
   background-color: #e2e6e7;
   background-image: linear-gradient(180deg, silver 0%, #666 100%);
+  padding: 0;
 }
-.input-box>div:last-child {
+button[name="search-btn"]:hover {
+  background-color: #666;
+  background-image: linear-gradient(180deg, silver 0%, #666 100%);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+button[name="search-btn"]:active {
+  background-color: #666;
+  background-image: linear-gradient(180deg, silver 0%, #666 100%);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 #search-text {
+  display: block;
   position: relative;
-  top: 6px;
-  left: -5px;
+  top: 0px;
+  left: 0px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   color: white;
   font-size: 14px;
@@ -145,8 +156,10 @@ button[name="search-btn"] {
   height: 13px;
   content: "";
   display: inline-block;
-  margin-left: 7px;
-  vertical-align: middle;
+  margin-left: 6px;
+  position: relative;
+  top: 1px;
+  /*vertical-align: middle;*/
 }
 .answers {
   display: none;
@@ -248,6 +261,7 @@ button[name="search-btn"] {
   margin: -15px;
   padding: 15px;
   background-color: #fff;
+  z-index: 1;
 }
 .dropdown-wrapper:hover .dropdown-items, .dropdown-wrapper:hover .dummy-block {
   display: block;
@@ -294,9 +308,169 @@ header hr {
 /*-------------------------------END OF HEADER STYLES-------------------------*/
 
 /*-------------------------------MAIN CONTAINER STYLES------------------------*/
+#main-page {
+  display: block;
+  margin-top: 20px;
+}
+#breadcrumbs {
+  display: table;
+}
+#breadcrumbs ul>li {
+  float: left;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 5px;
+}
+#breadcrumbs li:first-of-type a {
+  text-decoration: underline;
+  color: #ed8c00;
+}
+#breadcrumbs li:last-of-type a:hover {
+  text-decoration: none;
+}
+#main-content {
+  clear:both;
+  margin: 10px 0;
+}
+/*-------------------------------left menu STYLES-------------------------*/
+.left-menu-title {
+  color: #001376;
+  font-family: PostNL;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+#left-menu-block {
+  padding-right: 20px;
+}
+#left-menu-block li {
+  color: #666;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 25px;
+  border-bottom: 1px dotted #c1c5c7;
+}
+#left-menu-block li:first-of-type {
+  border-top: 1px dotted #c1c5c7;
+}
+/*-------------------------------end of left menu STYLES------------------*/
+/*-------------------------------right menu STYLES-------------------------*/
 
+/*-------------------------------end of right menu STYLES------------------*/
 /*-------------------------------END OF MAIN CONTAINER STYLES-----------------*/
+#advantages li {
+  position: relative;
+  display: block;
+  border-bottom: 1px solid rgba(210,214,217,0.5);
+  padding: 15px 0;
+}
+#advantages li:first-of-type {
+  padding-top: 0;
+}
+#call-block>div {
+  position: relative;
+}
+#advantages li img {
+  display: block;
+  position: absolute;
+  left:20px;
+  top: 18px;
+}
+.adv-desc {
+  display: block;
+  margin-left: 60px;
+}
+.adv-desc>p {
+  color: #ed8c00;
+  font-family: PostNL;
+  font-size: 14px;
+  font-weight: 400;
+}
+.adv-desc>span {
+  color: #666;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19px;
+}
+.helpdesk a {
+  color: #666;
+  font-family: PostNL;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 19px;
+}
+.helpdesk span {
+  display: block;
+  color: #666;
+  font-family: Arial;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 19px;
+}
+#advantages #call-block img {
+  top: 5px;
+}
+.phone {
+  display: block;
+  margin-top: 10px;
+}
+.phone button[name='phone-btn'] {
+  margin-left: 60px;
+  width: 100px;
+  height: 30px;
+  background-color: #e2e6e7;
+  background-image: linear-gradient(180deg, silver 0%, #666 100%);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.2);
+  border: 0;
+  padding: 0;
+  border-radius: 3px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
 
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-family: Arial;
+  font-size: 11px;
+  font-weight: 700;
+}
+.phone button[name='phone-btn']:focus {
+  cursor: pointer;
+  background-color: #666;
+  background-image: linear-gradient(180deg, silver 0%, #666 100%);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.phone button[name='phone-btn']:active {
+  cursor: pointer;
+  background-color: #666;
+  background-image: linear-gradient(180deg, silver 0%, #666 100%);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+#raiting {
+  display: block;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fdfdfd;
+  background-image: linear-gradient(to top, transparent 0%, rgba(102, 102, 102, 0.2) 100%);
+  border: 1px solid rgba(210, 214, 217, 0.5);
+  border-radius: 5px;
+}
+#raiting>* {
+  display: block;
+}
+#raiting>.adv-desc {
+  margin-left:0px;
+}
+#raiting span {
+  color: #666;
+  font-family: Arial;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 19px;
+}
 /*-------------------------------FOOTER STYLES--------------------------------*/
 footer {
   margin: 50px 0;
@@ -334,6 +508,7 @@ footer {
 }
 .bottom-footer ul {
   float: right;
+  margin-top: 10px;
 }
 .bottom-footer li {
   font-family: Arial;
@@ -469,6 +644,9 @@ footer {
   }
   .col-md-12{
     width: 100%;
+  }
+  .bottom-menu > li:last-of-type {
+    left: 0px;
   }
   .top-footer #row1>div, .top-footer #row2>div {
     padding-left: 60px;

@@ -26,7 +26,7 @@ var main = function (){
           });
 
   var resizeMe = function() {
-    if($(window).width() < 640) {
+    if($(window).width() < 625) {
       $("#search-text").text("");
     }
     else {
