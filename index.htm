@@ -11,37 +11,70 @@
     <div class="page">
       <header>
         <div class="header-container col">
-          <div class="logo-container col-lg-6">
+          <div class="logo-container col-lg-6 col-md-2 col-sm-2">
             <p><img src="Images/logos/post-nl-logo.png" alt="PostNL logo" /></p>
-            <p><img src="Images/logos/icons.png" alt="PostNL logos" /></p>
-            <p class="logo-title">Drukwerkservice</p>
+            <p class="visible-lg"><img src="Images/logos/icons.png" alt="PostNL logos" /></p>
+            <p class="logo-title visible-lg">Drukwerkservice</p>
           </div>
-          <div class="header-menu col-lg-6">
+          <div class="header-menu col-lg-6 col-md-10 col-sm-10">
             <div class="top-menu col">
-              <div class="access-menu col-lg-4">
+              <div class="access-menu not-visible-sm col-lg-4 col-md-4">
                 <ul>
-                  <li><a href="#">Inloggen</a></li>
-                  <li><a href="#">Registeren</a></li>
+                  <li class="or-arrow"><a href="#">Inloggen</a></li>
+                  <li class="or-arrow"><a href="#">Registeren</a></li>
                 </ul>
               </div>
-              <form class="search col-lg-8" action="index.html" method="post">
-                <div class="input-box">
-                  <input type="search" name="search" value="Vul hier uw zoekterm in">
-                  <button type="submit"></button>
+              <div class="search-wrapper col-lg-8 col-md-8 col-sm-12">
+                <form class="search" action="index.html" method="post">
+                  <div class="input-box">
+                    <div>
+                      <input type="search" name="search-input" value="Vul hier uw zoekterm in">
+                      <div class="search-icon"></div>
+                    </div>
+                    <div>
+                      <button type="button" name="search-btn"></button>
+                      <p id="search-text">zoeken</p>
+                    </div>
+                  </div>
+                </form>
+                <div class="answers">
+                  <div class="ans-wrapper">
+                    <div id="ans-title">Zoekresultaten</div>
+                    <ul id="ans-list">
+                      <li class="menu_pointer"><a href="#">-</a></li>
+                      <li class="menu_pointer"><a href="#">Voordelig</a></li>
+                      <li class="menu_pointer"><a href="#">Gemakkelijk</a></li>
+                      <li class="menu_pointer"><a href="#">Informatiepagina</a></li>
+                    </ul>
+                    <p class="or-arrow"><a id="more_res" href="#">meer resultaten (4)</a></p>
+                  </div>
                 </div>
-              </form>
+              </div>
             </div>
             <ul class="bottom-menu col">
-              <li class="col-lg-4">
-                <div class="main-menu">KLANTENSERVICE</div>
-                <p>Voor al uw vragen en info</p>
+              <li class="col-lg-4 col-md-4 col-sm-6">
+                <div class="dropdown-wrapper">
+                  <div class="dummy-block">&nbsp;</div>
+                  <div class="inner-wrapper">
+                    <div class="main-menu">klantenservice</div>
+                    <p>Voor al uw vragen en info</p>
+                    <div class="dropdown-items">
+                      <a href="#"><span class="menu_pointer">Contact opnemen</span></a>
+                      <a href="#"><span class="menu_pointer">Bel mij terug</span></a>
+                      <a href="#"><span class="menu_pointer">Veel gestelde vragen</span></a>
+                      <a href="#"><span class="menu_pointer">Proef accorderen</span></a>
+                      <a href="#"><span class="menu_pointer">Informatiepagina</span></a>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li class="col-lg-4">
-                <div class="main-menu">UW GEGEVENS</div>
+              <li class="col-lg-4 col-md-4 col-sm-6">
+                <div class="main-menu">uw gegevens</div>
                 <p>U bent niet ingelogd</p>
               </li>
-              <li class="col-lg-4">
-                <div class="main-menu">WINKELMAND</div>
+              <li class="not-visible-sm col-lg-4 col-md-4">
+                <img class="basket-img" src="../Images/icons/basket.png" alt="Shoping cart" />
+                <div class="main-menu">winkelmand</div>
                 <p>0 artikelen</p>
               </li>
             </ul>
