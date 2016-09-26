@@ -14,10 +14,7 @@ function prepareRotator(elem) {
 
 function startRotator(elem) {
   prepareRotator(elem);
-  setInterval("rotateBanners('"+elem+"')", 2500);
+  setInterval("rotateBanners('"+elem+"')", 5000);
 }
 
-
-$(window).load(function() {
-  startRotator("#rotator-wrapper");
-})
+$(document).ready(startRotator("#rotator-wrapper"));

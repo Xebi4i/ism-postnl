@@ -357,6 +357,18 @@ header hr {
 #rotator, #rotator-wrapper, .highline {
   display: block;
 }
+#rotator-wrapper {
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid rgba(193, 197, 199, 0.1);
+}
+#rotator-wrapper>img {
+  width: 100%;
+  display: none;
+}
+#rotator-wrapper>img[class="active"] {
+  display: block;
+}
 .highline {
   top: 100px;
   position: relative;
@@ -387,10 +399,6 @@ header hr {
   font-size: 20px;
   font-weight: 400;
   top: 35px;
-}
-#rotator-wrapper>img {
-  width: 100%;
-  /*position: absolute;*/
 }
 .dots li {
   float: right;
